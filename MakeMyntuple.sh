@@ -5,7 +5,7 @@
 ############################### Configuration #################################
 myntuple_H='myntuple.h' # myntuple.h templete file 
 myntuple_C='myntuple.C' # myntuple.C templete file
-Mode='0' # Job Mode 0:generate a Hist info templete file 1:auto hist range 2:fixed hist range 3:cut optimization
+Mode='1' # Job Mode 0:generate a Hist info templete file 1:auto hist range 2:fixed hist range 3:cut optimization
 hist_OUT='HistInfo.out' # Hist info file
 JobScriptDir='/home/storage0/users/junkaiqin/Ntuple-Processor/JobScriptDir' # Directory to store Job Script, where runjobs.C files exists
 # Such a Dir should be created by MakeJobScript.sh. DO NOT INCLUDE last / in JobScriptDir 
@@ -43,10 +43,8 @@ then
 			sed -i -e '/MAX_MIN_VARIABLES/{n;n;n;n;n;s:^:'"   double max_${h_name};\n   double min_${h_name};\n:g}" C_temp.C
 			sed -i -e '/MAX_MIN_TO_VECTOR/{n;n;n;s:^:'"   vmax.push_back(max_${h_name});\n   vmin.push_back(min_${h_name});\n:g}" C_temp.C
 			sed -i -e '/RANGE_TREE/{n;n;n;n;s:^:'"   RangeTree->Branch(\"$max_${h_name}\", &max_${h_name});\n   RangeTree->Branch(\"$min_${h_name}\", &min_${h_name});\n:g}" C_temp.C
-			sed -i -e '/FILL_SIG/{n;s:^:h_'"sig_${h_name}->Fill();\n:g}" C_temp.C
-			sed -i -e '/FILL_BKG/{n;s:^:h_'"sig_${h_name}->Fill();\n:g}" C_temp.C
-
 			sed -i -e '/FILL_SIG/{n;s:^:'"\t\t\th_sig_${h_name}->Fill();\n:g}" C_temp.C
+
 			sed -i -e '/FILL_BKG/{n;s:^:'"\t\t\th_bkg_${h_name}->Fill();\n:g}" C_temp.C
 		fi
 	done	
