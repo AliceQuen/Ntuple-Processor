@@ -4,9 +4,9 @@
 # Data from myntuple.C should be used in .C files above
 
 ############################### Configuration #################################
-DrawReadDir='/home/storage0/users/junkaiqin/Ntuple-Processor/DrawRead' # Directory where DrawDistribution.C and ReadRange.C is stored
+DrawReadDir='/home/storage0/users/junkaiqin/Ntuple-Processor/DrawRead/TestNewAll_Draw' # Directory where DrawDistribution.C and ReadRange.C is stored
 # Force to create DrawReadDir DO NOT INCLUDE last '/'
-DataDir='/home/storage0/users/junkaiqin/Ntuple-Processor' # Directory of Input Data, DO NOT INCLUDE the last '/'
+DataDir='/home/storage0/users/junkaiqin/Ntuple-Processor/Data/TestNewAll/TestNewAll_Data' # Directory of Input Data, DO NOT INCLUDE the last '/'
 BkgRescale='0.1' # Property used to rescale bkg,that is sig:bkg in X axis, float type
 hist_OUT='HistInfo.out' # Hist info file
 ###############################################################################

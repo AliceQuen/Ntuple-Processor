@@ -1,3 +1,6 @@
 JobScriptDir/*
-Data/*	
+DrawRead/*
+Data/*
+Output/*
 HistInfo.out
+.vscode/*

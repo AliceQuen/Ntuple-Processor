@@ -49,7 +49,7 @@ int DrawDistribution()
 		std::vector<std::string> histName = std::vector<string>();
 
 		// mass hist for Psi2S(X3872), over all target in searching
-		TH1F *h_Psi2s_mass = new TH1F("h_Psi2s_mass", "h_Psi2s_mass", 500, 3.2, 4.2);
+		TH1F *h_Psi2S_mass = new TH1F("h_Psi2S_mass", "h_Psi2S_mass", 500, 3.2, 4.2);
 		// HIST_DEFINE
 		// choose what value of mu pi pt dR cut,draw hist to see:
 		// HIST_TO_VECTOR
@@ -59,7 +59,7 @@ int DrawDistribution()
 			TFile *in = new TFile((dir + "/" + names->at(i)).c_str(), "READ");
 			std::string temp;
 			// mass hist for Psi2S(X3872), over all target
-			h_Psi2s_mass->Add(dynamic_cast<TH1 *>(in->Get("h_Psi2s_mass")));
+			h_Psi2S_mass->Add(dynamic_cast<TH1 *>(in->Get("h_Psi2S_mass")));
 			for (unsigned int j = 0; j < num1; j++)
 			{	
 				temp = "h_sig_" + histName.at(j);

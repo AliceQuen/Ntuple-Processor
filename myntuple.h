@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Wed May 22 02:54:05 2024 by ROOT version 6.26/11
-// from TTree X_data/X(3872) Data
+// Tue Nov 12 03:55:08 2024 by ROOT version 6.24/06
+// from TTree myntuple/X(3872) Data
 // found on file: mymultilep_1.root
 //////////////////////////////////////////////////////////
 
@@ -17,8 +17,6 @@
 #include "vector"
 #include "vector"
 #include "vector"
-#include "vector"
-#include "vector"
 
 class myntuple {
 public :
@@ -30,81 +28,47 @@ public :
    // Declaration of leaf types
    vector<unsigned int> *TrigRes;
    vector<string>  *TrigNames;
-   vector<string>  *MatchTriggerNames;
    vector<unsigned int> *L1TrigRes;
+   vector<string>  *MatchJpsiTrigNames;
    UInt_t          evtNum;
    UInt_t          runNum;
    UInt_t          lumiNum;
    UInt_t          nGoodPrimVtx;
-   Float16_t       priVtxX;
-   Float16_t       priVtxY;
-   Float16_t       priVtxZ;
-   Float16_t       priVtxXE;
-   Float16_t       priVtxYE;
-   Float16_t       priVtxZE;
-   Float16_t       priVtxChiNorm;
-   Float16_t       priVtxChi;
-   Float16_t       priVtxCL;
-   vector<float>   *PriVtxXCorrX;
-   vector<float>   *PriVtxXCorrY;
-   vector<float>   *PriVtxXCorrZ;
-   vector<double>  *PriVtxXCorrEX;
-   vector<double>  *PriVtxXCorrEY;
-   vector<double>  *PriVtxXCorrEZ;
-   vector<float>   *PriVtxXCorrC2;
-   vector<float>   *PriVtxXCorrCL;
+   Float_t         priVtxX;
+   Float_t         priVtxY;
+   Float_t         priVtxZ;
+   Float_t         priVtxXErr;
+   Float_t         priVtxYErr;
+   Float_t         priVtxZErr;
+   Float_t         priVtxChiNorm;
+   Float_t         priVtxChi;
+   Float_t         priVtxCL;
+   vector<float>   *priVtxXCorrY;
+   vector<float>   *priVtxXCorrZ;
+   vector<float>   *priVtxYCorrZ;
    UInt_t          nMu;
    vector<float>   *muPx;
    vector<float>   *muPy;
    vector<float>   *muPz;
-   vector<float>   *muD0;
-   vector<float>   *muD0E;
-   vector<float>   *muDz;
-   vector<float>   *muChi2;
-   vector<float>   *muGlChi2;
-   vector<float>   *mufHits;
-   vector<bool>    *muFirstBarrel;
-   vector<bool>    *muFirstEndCap;
-   vector<float>   *muDzVtx;
-   vector<float>   *muDxyVtx;
-   vector<int>     *muNDF;
-   vector<int>     *muGlNDF;
-   vector<int>     *muPhits;
-   vector<int>     *muShits;
-   vector<int>     *muGlMuHits;
-   vector<int>     *muType;
-   vector<int>     *muQual;
-   vector<int>     *muTrack;
+   vector<float>   *muD0BS;
+   vector<float>   *muD0EBS;
+   vector<float>   *muD3dBS;
+   vector<float>   *muD3dEBS;
+   vector<float>   *muD0PV;
+   vector<float>   *muD0EPV;
+   vector<float>   *muDzPV;
+   vector<float>   *muDzEPV;
    vector<float>   *muCharge;
-   vector<float>   *muIsoratio;
-   vector<int>     *munMatchedSeg;
-   vector<int>     *muIsGoodSoftMuonNewIlseMod;
-   vector<int>     *muIsGoodSoftMuonNewIlse;
-   vector<int>     *muIsGoodLooseMuonNew;
-   vector<int>     *muIsGoodLooseMuon;
-   vector<int>     *muIsGoodTightMuon;
+   vector<float>   *muTrackIso;
    vector<int>     *muIsPatLooseMuon;
    vector<int>     *muIsPatTightMuon;
    vector<int>     *muIsPatSoftMuon;
    vector<int>     *muIsPatMediumMuon;
-   vector<int>     *muIsJpsiTrigMatch;
-   vector<int>     *muIsUpsTrigMatch;
-   vector<float>   *muMVAMuonID;
-   vector<float>   *musegmentCompatibility;
-   vector<float>   *mupulldXdZ_pos_noArb;
-   vector<float>   *mupulldYdZ_pos_noArb;
-   vector<float>   *mupulldXdZ_pos_ArbDef;
-   vector<float>   *mupulldYdZ_pos_ArbDef;
-   vector<float>   *mupulldXdZ_pos_ArbST;
-   vector<float>   *mupulldYdZ_pos_ArbST;
-   vector<float>   *mupulldXdZ_pos_noArb_any;
-   vector<float>   *mupulldYdZ_pos_noArb_any;
-   vector<int>     *muUpsVrtxMatch;
-   vector<int>     *muL3TriggerMatch;
-   vector<float>   *X_mu1Idx;
-   vector<float>   *X_mu2Idx;
-   vector<float>   *X_mu3Idx;
-   vector<float>   *X_mu4Idx;
+   vector<int>     *muJpsiFilterRes;
+   vector<float>   *X_mu1Id;
+   vector<float>   *X_mu2Id;
+   vector<float>   *X_mu3Id;
+   vector<float>   *X_mu4Id;
    vector<float>   *X_mass;
    vector<float>   *X_VtxProb;
    vector<float>   *X_Chi2;
@@ -137,8 +101,8 @@ public :
    vector<float>   *X_Jpsi2_py;
    vector<float>   *X_Jpsi2_pz;
    vector<float>   *X_Jpsi2_massErr;
-   vector<float>   *X_JPiPi_Pi1Idx;
-   vector<float>   *X_JPiPi_Pi2Idx;
+   vector<float>   *X_JPiPi_Pi1Id;
+   vector<float>   *X_JPiPi_Pi2Id;
    vector<float>   *X_JPiPi_Pi1px;
    vector<float>   *X_JPiPi_Pi1py;
    vector<float>   *X_JPiPi_Pi1pz;
@@ -205,81 +169,47 @@ public :
    // List of branches
    TBranch        *b_TrigRes;   //!
    TBranch        *b_TrigNames;   //!
-   TBranch        *b_MatchTriggerNames;   //!
    TBranch        *b_L1TrigRes;   //!
+   TBranch        *b_MatchJpsiTrigNames;   //!
    TBranch        *b_evtNum;   //!
    TBranch        *b_runNum;   //!
    TBranch        *b_lumiNum;   //!
    TBranch        *b_nGoodPrimVtx;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_f;   //!
-   TBranch        *b_PriVtxXCorrX;   //!
-   TBranch        *b_PriVtxXCorrY;   //!
-   TBranch        *b_PriVtxXCorrZ;   //!
-   TBranch        *b_PriVtxXCorrEX;   //!
-   TBranch        *b_PriVtxXCorrEY;   //!
-   TBranch        *b_PriVtxXCorrEZ;   //!
-   TBranch        *b_PriVtxXCorrC2;   //!
-   TBranch        *b_PriVtxXCorrCL;   //!
+   TBranch        *b_priVtxX;   //!
+   TBranch        *b_priVtxY;   //!
+   TBranch        *b_priVtxZ;   //!
+   TBranch        *b_priVtxXErr;   //!
+   TBranch        *b_priVtxYErr;   //!
+   TBranch        *b_priVtxZErr;   //!
+   TBranch        *b_priVtxChiNorm;   //!
+   TBranch        *b_priVtxChi;   //!
+   TBranch        *b_priVtxCL;   //!
+   TBranch        *b_priVtxXCorrY;   //!
+   TBranch        *b_priVtxXCorrZ;   //!
+   TBranch        *b_priVtxYCorrZ;   //!
    TBranch        *b_nMu;   //!
    TBranch        *b_muPx;   //!
    TBranch        *b_muPy;   //!
    TBranch        *b_muPz;   //!
-   TBranch        *b_muD0;   //!
-   TBranch        *b_muD0E;   //!
-   TBranch        *b_muDz;   //!
-   TBranch        *b_muChi2;   //!
-   TBranch        *b_muGlChi2;   //!
-   TBranch        *b_mufHits;   //!
-   TBranch        *b_muFirstBarrel;   //!
-   TBranch        *b_muFirstEndCap;   //!
-   TBranch        *b_muDzVtx;   //!
-   TBranch        *b_muDxyVtx;   //!
-   TBranch        *b_muNDF;   //!
-   TBranch        *b_muGlNDF;   //!
-   TBranch        *b_muPhits;   //!
-   TBranch        *b_muShits;   //!
-   TBranch        *b_muGlMuHits;   //!
-   TBranch        *b_muType;   //!
-   TBranch        *b_muQual;   //!
-   TBranch        *b_muTrack;   //!
+   TBranch        *b_muD0BS;   //!
+   TBranch        *b_muD0EBS;   //!
+   TBranch        *b_muD3dBS;   //!
+   TBranch        *b_muD3dEBS;   //!
+   TBranch        *b_muD0PV;   //!
+   TBranch        *b_muD0EPV;   //!
+   TBranch        *b_muDzPV;   //!
+   TBranch        *b_muDzEPV;   //!
    TBranch        *b_muCharge;   //!
-   TBranch        *b_muIsoratio;   //!
-   TBranch        *b_munMatchedSeg;   //!
-   TBranch        *b_muIsGoodSoftMuonNewIlseMod;   //!
-   TBranch        *b_muIsGoodSoftMuonNewIlse;   //!
-   TBranch        *b_muIsGoodLooseMuonNew;   //!
-   TBranch        *b_muIsGoodLooseMuon;   //!
-   TBranch        *b_muIsGoodTightMuon;   //!
+   TBranch        *b_muTrackIso;   //!
    TBranch        *b_muIsPatLooseMuon;   //!
    TBranch        *b_muIsPatTightMuon;   //!
    TBranch        *b_muIsPatSoftMuon;   //!
    TBranch        *b_muIsPatMediumMuon;   //!
-   TBranch        *b_muIsJpsiTrigMatch;   //!
-   TBranch        *b_muIsUpsTrigMatch;   //!
-   TBranch        *b_muMVAMuonID;   //!
-   TBranch        *b_musegmentCompatibility;   //!
-   TBranch        *b_mupulldXdZ_pos_noArb;   //!
-   TBranch        *b_mupulldYdZ_pos_noArb;   //!
-   TBranch        *b_mupulldXdZ_pos_ArbDef;   //!
-   TBranch        *b_mupulldYdZ_pos_ArbDef;   //!
-   TBranch        *b_mupulldXdZ_pos_ArbST;   //!
-   TBranch        *b_mupulldYdZ_pos_ArbST;   //!
-   TBranch        *b_mupulldXdZ_pos_noArb_any;   //!
-   TBranch        *b_mupulldYdZ_pos_noArb_any;   //!
-   TBranch        *b_muUpsVrtxMatch;   //!
-   TBranch        *b_muL3TriggerMatch;   //!
-   TBranch        *b_X_mu1Idx;   //!
-   TBranch        *b_X_mu2Idx;   //!
-   TBranch        *b_X_mu3Idx;   //!
-   TBranch        *b_X_mu4Idx;   //!
+   TBranch        *b_muJpsiFilterRes;   //!
+   TBranch        *b_X_mu1Id;   //!
+   TBranch        *b_X_mu2Id;   //!
+   TBranch        *b_X_mu3Id;   //!
+   TBranch        *b_X_mu4Id;   //!
    TBranch        *b_X_mass;   //!
    TBranch        *b_X_VtxProb;   //!
    TBranch        *b_X_Chi2;   //!
@@ -312,8 +242,8 @@ public :
    TBranch        *b_X_Jpsi2_py;   //!
    TBranch        *b_X_Jpsi2_pz;   //!
    TBranch        *b_X_Jpsi2_massErr;   //!
-   TBranch        *b_X_JPiPi_Pi1Idx;   //!
-   TBranch        *b_X_JPiPi_Pi2Idx;   //!
+   TBranch        *b_X_JPiPi_Pi1Id;   //!
+   TBranch        *b_X_JPiPi_Pi2Id;   //!
    TBranch        *b_X_JPiPi_Pi1px;   //!
    TBranch        *b_X_JPiPi_Pi1py;   //!
    TBranch        *b_X_JPiPi_Pi1pz;   //!
@@ -401,7 +331,7 @@ myntuple::myntuple(TTree *tree) : fChain(0)
          f = new TFile("mymultilep_1.root");
       }
       TDirectory * dir = (TDirectory*)f->Get("mymultilep_1.root:/mkcands");
-      dir->GetObject("X_data",tree);
+      dir->GetObject("myntuple",tree);
 
    }
    Init(tree);
@@ -445,67 +375,33 @@ void myntuple::Init(TTree *tree)
    // Set object pointer
    TrigRes = 0;
    TrigNames = 0;
-   MatchTriggerNames = 0;
    L1TrigRes = 0;
-   PriVtxXCorrX = 0;
-   PriVtxXCorrY = 0;
-   PriVtxXCorrZ = 0;
-   PriVtxXCorrEX = 0;
-   PriVtxXCorrEY = 0;
-   PriVtxXCorrEZ = 0;
-   PriVtxXCorrC2 = 0;
-   PriVtxXCorrCL = 0;
+   MatchJpsiTrigNames = 0;
+   priVtxXCorrY = 0;
+   priVtxXCorrZ = 0;
+   priVtxYCorrZ = 0;
    muPx = 0;
    muPy = 0;
    muPz = 0;
-   muD0 = 0;
-   muD0E = 0;
-   muDz = 0;
-   muChi2 = 0;
-   muGlChi2 = 0;
-   mufHits = 0;
-   muFirstBarrel = 0;
-   muFirstEndCap = 0;
-   muDzVtx = 0;
-   muDxyVtx = 0;
-   muNDF = 0;
-   muGlNDF = 0;
-   muPhits = 0;
-   muShits = 0;
-   muGlMuHits = 0;
-   muType = 0;
-   muQual = 0;
-   muTrack = 0;
+   muD0BS = 0;
+   muD0EBS = 0;
+   muD3dBS = 0;
+   muD3dEBS = 0;
+   muD0PV = 0;
+   muD0EPV = 0;
+   muDzPV = 0;
+   muDzEPV = 0;
    muCharge = 0;
-   muIsoratio = 0;
-   munMatchedSeg = 0;
-   muIsGoodSoftMuonNewIlseMod = 0;
-   muIsGoodSoftMuonNewIlse = 0;
-   muIsGoodLooseMuonNew = 0;
-   muIsGoodLooseMuon = 0;
-   muIsGoodTightMuon = 0;
+   muTrackIso = 0;
    muIsPatLooseMuon = 0;
    muIsPatTightMuon = 0;
    muIsPatSoftMuon = 0;
    muIsPatMediumMuon = 0;
-   muIsJpsiTrigMatch = 0;
-   muIsUpsTrigMatch = 0;
-   muMVAMuonID = 0;
-   musegmentCompatibility = 0;
-   mupulldXdZ_pos_noArb = 0;
-   mupulldYdZ_pos_noArb = 0;
-   mupulldXdZ_pos_ArbDef = 0;
-   mupulldYdZ_pos_ArbDef = 0;
-   mupulldXdZ_pos_ArbST = 0;
-   mupulldYdZ_pos_ArbST = 0;
-   mupulldXdZ_pos_noArb_any = 0;
-   mupulldYdZ_pos_noArb_any = 0;
-   muUpsVrtxMatch = 0;
-   muL3TriggerMatch = 0;
-   X_mu1Idx = 0;
-   X_mu2Idx = 0;
-   X_mu3Idx = 0;
-   X_mu4Idx = 0;
+   muJpsiFilterRes = 0;
+   X_mu1Id = 0;
+   X_mu2Id = 0;
+   X_mu3Id = 0;
+   X_mu4Id = 0;
    X_mass = 0;
    X_VtxProb = 0;
    X_Chi2 = 0;
@@ -538,8 +434,8 @@ void myntuple::Init(TTree *tree)
    X_Jpsi2_py = 0;
    X_Jpsi2_pz = 0;
    X_Jpsi2_massErr = 0;
-   X_JPiPi_Pi1Idx = 0;
-   X_JPiPi_Pi2Idx = 0;
+   X_JPiPi_Pi1Id = 0;
+   X_JPiPi_Pi2Id = 0;
    X_JPiPi_Pi1px = 0;
    X_JPiPi_Pi1py = 0;
    X_JPiPi_Pi1pz = 0;
@@ -610,81 +506,47 @@ void myntuple::Init(TTree *tree)
 
    fChain->SetBranchAddress("TrigRes", &TrigRes, &b_TrigRes);
    fChain->SetBranchAddress("TrigNames", &TrigNames, &b_TrigNames);
-   fChain->SetBranchAddress("MatchTriggerNames", &MatchTriggerNames, &b_MatchTriggerNames);
    fChain->SetBranchAddress("L1TrigRes", &L1TrigRes, &b_L1TrigRes);
+   fChain->SetBranchAddress("MatchJpsiTrigNames", &MatchJpsiTrigNames, &b_MatchJpsiTrigNames);
    fChain->SetBranchAddress("evtNum", &evtNum, &b_evtNum);
    fChain->SetBranchAddress("runNum", &runNum, &b_runNum);
    fChain->SetBranchAddress("lumiNum", &lumiNum, &b_lumiNum);
    fChain->SetBranchAddress("nGoodPrimVtx", &nGoodPrimVtx, &b_nGoodPrimVtx);
-   fChain->SetBranchAddress("priVtxX", &priVtxX, &b_f);
-   fChain->SetBranchAddress("priVtxY", &priVtxY, &b_f);
-   fChain->SetBranchAddress("priVtxZ", &priVtxZ, &b_f);
-   fChain->SetBranchAddress("priVtxXE", &priVtxXE, &b_f);
-   fChain->SetBranchAddress("priVtxYE", &priVtxYE, &b_f);
-   fChain->SetBranchAddress("priVtxZE", &priVtxZE, &b_f);
-   fChain->SetBranchAddress("priVtxChiNorm", &priVtxChiNorm, &b_f);
-   fChain->SetBranchAddress("priVtxChi", &priVtxChi, &b_f);
-   fChain->SetBranchAddress("priVtxCL", &priVtxCL, &b_f);
-   fChain->SetBranchAddress("PriVtxXCorrX", &PriVtxXCorrX, &b_PriVtxXCorrX);
-   fChain->SetBranchAddress("PriVtxXCorrY", &PriVtxXCorrY, &b_PriVtxXCorrY);
-   fChain->SetBranchAddress("PriVtxXCorrZ", &PriVtxXCorrZ, &b_PriVtxXCorrZ);
-   fChain->SetBranchAddress("PriVtxXCorrEX", &PriVtxXCorrEX, &b_PriVtxXCorrEX);
-   fChain->SetBranchAddress("PriVtxXCorrEY", &PriVtxXCorrEY, &b_PriVtxXCorrEY);
-   fChain->SetBranchAddress("PriVtxXCorrEZ", &PriVtxXCorrEZ, &b_PriVtxXCorrEZ);
-   fChain->SetBranchAddress("PriVtxXCorrC2", &PriVtxXCorrC2, &b_PriVtxXCorrC2);
-   fChain->SetBranchAddress("PriVtxXCorrCL", &PriVtxXCorrCL, &b_PriVtxXCorrCL);
+   fChain->SetBranchAddress("priVtxX", &priVtxX, &b_priVtxX);
+   fChain->SetBranchAddress("priVtxY", &priVtxY, &b_priVtxY);
+   fChain->SetBranchAddress("priVtxZ", &priVtxZ, &b_priVtxZ);
+   fChain->SetBranchAddress("priVtxXErr", &priVtxXErr, &b_priVtxXErr);
+   fChain->SetBranchAddress("priVtxYErr", &priVtxYErr, &b_priVtxYErr);
+   fChain->SetBranchAddress("priVtxZErr", &priVtxZErr, &b_priVtxZErr);
+   fChain->SetBranchAddress("priVtxChiNorm", &priVtxChiNorm, &b_priVtxChiNorm);
+   fChain->SetBranchAddress("priVtxChi", &priVtxChi, &b_priVtxChi);
+   fChain->SetBranchAddress("priVtxCL", &priVtxCL, &b_priVtxCL);
+   fChain->SetBranchAddress("priVtxXCorrY", &priVtxXCorrY, &b_priVtxXCorrY);
+   fChain->SetBranchAddress("priVtxXCorrZ", &priVtxXCorrZ, &b_priVtxXCorrZ);
+   fChain->SetBranchAddress("priVtxYCorrZ", &priVtxYCorrZ, &b_priVtxYCorrZ);
    fChain->SetBranchAddress("nMu", &nMu, &b_nMu);
    fChain->SetBranchAddress("muPx", &muPx, &b_muPx);
    fChain->SetBranchAddress("muPy", &muPy, &b_muPy);
    fChain->SetBranchAddress("muPz", &muPz, &b_muPz);
-   fChain->SetBranchAddress("muD0", &muD0, &b_muD0);
-   fChain->SetBranchAddress("muD0E", &muD0E, &b_muD0E);
-   fChain->SetBranchAddress("muDz", &muDz, &b_muDz);
-   fChain->SetBranchAddress("muChi2", &muChi2, &b_muChi2);
-   fChain->SetBranchAddress("muGlChi2", &muGlChi2, &b_muGlChi2);
-   fChain->SetBranchAddress("mufHits", &mufHits, &b_mufHits);
-   fChain->SetBranchAddress("muFirstBarrel", &muFirstBarrel, &b_muFirstBarrel);
-   fChain->SetBranchAddress("muFirstEndCap", &muFirstEndCap, &b_muFirstEndCap);
-   fChain->SetBranchAddress("muDzVtx", &muDzVtx, &b_muDzVtx);
-   fChain->SetBranchAddress("muDxyVtx", &muDxyVtx, &b_muDxyVtx);
-   fChain->SetBranchAddress("muNDF", &muNDF, &b_muNDF);
-   fChain->SetBranchAddress("muGlNDF", &muGlNDF, &b_muGlNDF);
-   fChain->SetBranchAddress("muPhits", &muPhits, &b_muPhits);
-   fChain->SetBranchAddress("muShits", &muShits, &b_muShits);
-   fChain->SetBranchAddress("muGlMuHits", &muGlMuHits, &b_muGlMuHits);
-   fChain->SetBranchAddress("muType", &muType, &b_muType);
-   fChain->SetBranchAddress("muQual", &muQual, &b_muQual);
-   fChain->SetBranchAddress("muTrack", &muTrack, &b_muTrack);
+   fChain->SetBranchAddress("muD0BS", &muD0BS, &b_muD0BS);
+   fChain->SetBranchAddress("muD0EBS", &muD0EBS, &b_muD0EBS);
+   fChain->SetBranchAddress("muD3dBS", &muD3dBS, &b_muD3dBS);
+   fChain->SetBranchAddress("muD3dEBS", &muD3dEBS, &b_muD3dEBS);
+   fChain->SetBranchAddress("muD0PV", &muD0PV, &b_muD0PV);
+   fChain->SetBranchAddress("muD0EPV", &muD0EPV, &b_muD0EPV);
+   fChain->SetBranchAddress("muDzPV", &muDzPV, &b_muDzPV);
+   fChain->SetBranchAddress("muDzEPV", &muDzEPV, &b_muDzEPV);
    fChain->SetBranchAddress("muCharge", &muCharge, &b_muCharge);
-   fChain->SetBranchAddress("muIsoratio", &muIsoratio, &b_muIsoratio);
-   fChain->SetBranchAddress("munMatchedSeg", &munMatchedSeg, &b_munMatchedSeg);
-   fChain->SetBranchAddress("muIsGoodSoftMuonNewIlseMod", &muIsGoodSoftMuonNewIlseMod, &b_muIsGoodSoftMuonNewIlseMod);
-   fChain->SetBranchAddress("muIsGoodSoftMuonNewIlse", &muIsGoodSoftMuonNewIlse, &b_muIsGoodSoftMuonNewIlse);
-   fChain->SetBranchAddress("muIsGoodLooseMuonNew", &muIsGoodLooseMuonNew, &b_muIsGoodLooseMuonNew);
-   fChain->SetBranchAddress("muIsGoodLooseMuon", &muIsGoodLooseMuon, &b_muIsGoodLooseMuon);
-   fChain->SetBranchAddress("muIsGoodTightMuon", &muIsGoodTightMuon, &b_muIsGoodTightMuon);
+   fChain->SetBranchAddress("muTrackIso", &muTrackIso, &b_muTrackIso);
    fChain->SetBranchAddress("muIsPatLooseMuon", &muIsPatLooseMuon, &b_muIsPatLooseMuon);
    fChain->SetBranchAddress("muIsPatTightMuon", &muIsPatTightMuon, &b_muIsPatTightMuon);
    fChain->SetBranchAddress("muIsPatSoftMuon", &muIsPatSoftMuon, &b_muIsPatSoftMuon);
    fChain->SetBranchAddress("muIsPatMediumMuon", &muIsPatMediumMuon, &b_muIsPatMediumMuon);
-   fChain->SetBranchAddress("muIsJpsiTrigMatch", &muIsJpsiTrigMatch, &b_muIsJpsiTrigMatch);
-   fChain->SetBranchAddress("muIsUpsTrigMatch", &muIsUpsTrigMatch, &b_muIsUpsTrigMatch);
-   fChain->SetBranchAddress("muMVAMuonID", &muMVAMuonID, &b_muMVAMuonID);
-   fChain->SetBranchAddress("musegmentCompatibility", &musegmentCompatibility, &b_musegmentCompatibility);
-   fChain->SetBranchAddress("mupulldXdZ_pos_noArb", &mupulldXdZ_pos_noArb, &b_mupulldXdZ_pos_noArb);
-   fChain->SetBranchAddress("mupulldYdZ_pos_noArb", &mupulldYdZ_pos_noArb, &b_mupulldYdZ_pos_noArb);
-   fChain->SetBranchAddress("mupulldXdZ_pos_ArbDef", &mupulldXdZ_pos_ArbDef, &b_mupulldXdZ_pos_ArbDef);
-   fChain->SetBranchAddress("mupulldYdZ_pos_ArbDef", &mupulldYdZ_pos_ArbDef, &b_mupulldYdZ_pos_ArbDef);
-   fChain->SetBranchAddress("mupulldXdZ_pos_ArbST", &mupulldXdZ_pos_ArbST, &b_mupulldXdZ_pos_ArbST);
-   fChain->SetBranchAddress("mupulldYdZ_pos_ArbST", &mupulldYdZ_pos_ArbST, &b_mupulldYdZ_pos_ArbST);
-   fChain->SetBranchAddress("mupulldXdZ_pos_noArb_any", &mupulldXdZ_pos_noArb_any, &b_mupulldXdZ_pos_noArb_any);
-   fChain->SetBranchAddress("mupulldYdZ_pos_noArb_any", &mupulldYdZ_pos_noArb_any, &b_mupulldYdZ_pos_noArb_any);
-   fChain->SetBranchAddress("muUpsVrtxMatch", &muUpsVrtxMatch, &b_muUpsVrtxMatch);
-   fChain->SetBranchAddress("muL3TriggerMatch", &muL3TriggerMatch, &b_muL3TriggerMatch);
-   fChain->SetBranchAddress("X_mu1Idx", &X_mu1Idx, &b_X_mu1Idx);
-   fChain->SetBranchAddress("X_mu2Idx", &X_mu2Idx, &b_X_mu2Idx);
-   fChain->SetBranchAddress("X_mu3Idx", &X_mu3Idx, &b_X_mu3Idx);
-   fChain->SetBranchAddress("X_mu4Idx", &X_mu4Idx, &b_X_mu4Idx);
+   fChain->SetBranchAddress("muJpsiFilterRes", &muJpsiFilterRes, &b_muJpsiFilterRes);
+   fChain->SetBranchAddress("X_mu1Id", &X_mu1Id, &b_X_mu1Id);
+   fChain->SetBranchAddress("X_mu2Id", &X_mu2Id, &b_X_mu2Id);
+   fChain->SetBranchAddress("X_mu3Id", &X_mu3Id, &b_X_mu3Id);
+   fChain->SetBranchAddress("X_mu4Id", &X_mu4Id, &b_X_mu4Id);
    fChain->SetBranchAddress("X_mass", &X_mass, &b_X_mass);
    fChain->SetBranchAddress("X_VtxProb", &X_VtxProb, &b_X_VtxProb);
    fChain->SetBranchAddress("X_Chi2", &X_Chi2, &b_X_Chi2);
@@ -717,8 +579,8 @@ void myntuple::Init(TTree *tree)
    fChain->SetBranchAddress("X_Jpsi2_py", &X_Jpsi2_py, &b_X_Jpsi2_py);
    fChain->SetBranchAddress("X_Jpsi2_pz", &X_Jpsi2_pz, &b_X_Jpsi2_pz);
    fChain->SetBranchAddress("X_Jpsi2_massErr", &X_Jpsi2_massErr, &b_X_Jpsi2_massErr);
-   fChain->SetBranchAddress("X_JPiPi_Pi1Idx", &X_JPiPi_Pi1Idx, &b_X_JPiPi_Pi1Idx);
-   fChain->SetBranchAddress("X_JPiPi_Pi2Idx", &X_JPiPi_Pi2Idx, &b_X_JPiPi_Pi2Idx);
+   fChain->SetBranchAddress("X_JPiPi_Pi1Id", &X_JPiPi_Pi1Id, &b_X_JPiPi_Pi1Id);
+   fChain->SetBranchAddress("X_JPiPi_Pi2Id", &X_JPiPi_Pi2Id, &b_X_JPiPi_Pi2Id);
    fChain->SetBranchAddress("X_JPiPi_Pi1px", &X_JPiPi_Pi1px, &b_X_JPiPi_Pi1px);
    fChain->SetBranchAddress("X_JPiPi_Pi1py", &X_JPiPi_Pi1py, &b_X_JPiPi_Pi1py);
    fChain->SetBranchAddress("X_JPiPi_Pi1pz", &X_JPiPi_Pi1pz, &b_X_JPiPi_Pi1pz);

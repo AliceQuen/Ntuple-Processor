@@ -1,3 +1,6 @@
+/*Once complete the modification, write file and quit vim*/
+/*Maybe you still want to modify it*/
+/*This is myntuple.C generated automatically*/
 #define myntuple_cxx
 #include "myntuple.h"
 #include <TH2.h>
@@ -70,83 +73,83 @@ void myntuple::Loop(TString outputname)
    // vmax.push_back(&...);
    // vmin.push_back(&...);
    // RANGE_TREE
-   TTree *RangeTree = new TTree("RangeTree", "RangeTree");
+//   TTree *RangeTree = new TTree("RangeTree", "RangeTree");
    // RangeTree->Branch("max...", &max...);
    // RangeTree->Branch("min...", &min...);
    
-   Long64_t nentries = fChain->GetEntriesFast();
+   Long64_t nentries = fChain->GetEntries();
 
    Long64_t nbytes = 0, nb = 0;
-   for (Long64_t jentry=0; jentry<nentries;jentry++) {
+   for (Long64_t jentry=0; jentry < nentries; jentry++) {
       Long64_t ientry = LoadTree(jentry);
       if (ientry < 0) break;
       nb = fChain->GetEntry(jentry);   nbytes += nb;
       if (jentry % 100 == 0)
       {
-	cout << "I am running " << jentry << "out of " <<nentries << endl;
+	cout << "I am running " << jentry << " out of " << nentries << endl;
       }
       // if (Cut(ientry) < 0) continue;
       for (long unsigned int j = 0; j < X_JPiPi_mass->size(); j++)
       {
 	TLorentzVector Xp4;
-      	TLorentzVector Psi2Sp4, Jpsi1p4, Jpsi2p4, Pi1p4, Pi2p4;
+      	TLorentzVector Psi2Sp4, Jpsi1_p4, Jpsi2_p4, Pi1p4, Pi2p4;
       	Psi2Sp4.SetXYZM((*X_JPiPi_px)[j], (*X_JPiPi_py)[j], (*X_JPiPi_pz)[j], (*X_JPiPi_mass)[j]);
-      	Jpsi1p4.SetXYZM((*X_Jpsi1_px)[j], (*X_Jpsi1py)[j], (*X_Jpsi1pz)[j], (*X_Jpsi1mass)[j]);
-      	Jpsi2p4.SetXYZM((*X_Jpsi2_px)[j], (*X_Jpsi2py)[j], (*X_Jpsi2pz)[j], (*X_Jpsi2mass)[j]);
-      	Pi1p4.SetXYZM((*X_JPiPi_Pi1_px)[j], (*X_JPiPi_Pi1py)[j], (*X_JPiPi_Pi1pz)[j], PION_MASS);
-      	Pi2p4.SetXYZM((*X_JPiPi_Pi2_px)[j], (*X_JPiPi_Pi2py)[j], (*X_JPiPi_Pi2pz)[j], PION_MASS);
+      	Jpsi1_p4.SetXYZM((*X_Jpsi1_px)[j], (*X_Jpsi1_py)[j], (*X_Jpsi1_pz)[j], (*X_Jpsi1_mass)[j]);
+      	Jpsi2_p4.SetXYZM((*X_Jpsi2_px)[j], (*X_Jpsi2_py)[j], (*X_Jpsi2_pz)[j], (*X_Jpsi2_mass)[j]);
+      	Pi1p4.SetXYZM((*X_JPiPi_Pi1px)[j], (*X_JPiPi_Pi1py)[j], (*X_JPiPi_Pi1pz)[j], PION_MASS);
+      	Pi2p4.SetXYZM((*X_JPiPi_Pi2px)[j], (*X_JPiPi_Pi2py)[j], (*X_JPiPi_Pi2pz)[j], PION_MASS);
 
       	TLorentzVector raw_mu1P4;
-      	float raw_muPx = (*muPx)[(*X_mu1Idx)[j]];
-      	float raw_muPy = (*muPy)[(*X_mu1Idx)[j]];
-      	float raw_muPz = (*muPz)[(*X_mu1Idx)[j]];
+      	float raw_muPx = (*muPx)[(*X_mu1Id)[j]];
+      	float raw_muPy = (*muPy)[(*X_mu1Id)[j]];
+      	float raw_muPz = (*muPz)[(*X_mu1Id)[j]];
       	raw_mu1P4.SetXYZM(raw_muPx, raw_muPy, raw_muPz, MUON_MASS);
       	TLorentzVector raw_mu2P4;
-      	raw_muPx = (*muPx)[(*X_mu2Idx)[j]];
-      	raw_muPy = (*muPy)[(*X_mu2Idx)[j]];
-      	raw_muPz = (*muPz)[(*X_mu2Idx)[j]];
+      	raw_muPx = (*muPx)[(*X_mu2Id)[j]];
+      	raw_muPy = (*muPy)[(*X_mu2Id)[j]];
+      	raw_muPz = (*muPz)[(*X_mu2Id)[j]];
       	raw_mu2P4.SetXYZM(raw_muPx, raw_muPy, raw_muPz, MUON_MASS);
       	TLorentzVector raw_mu3P4;
-      	raw_muPx = (*muPx)[(*X_mu3Idx)[j]];
-      	raw_muPy = (*muPy)[(*X_mu3Idx)[j]];
-      	raw_muPz = (*muPz)[(*X_mu3Idx)[j]];
+      	raw_muPx = (*muPx)[(*X_mu3Id)[j]];
+      	raw_muPy = (*muPy)[(*X_mu3Id)[j]];
+      	raw_muPz = (*muPz)[(*X_mu3Id)[j]];
       	raw_mu3P4.SetXYZM(raw_muPx, raw_muPy, raw_muPz, MUON_MASS);
       	TLorentzVector raw_mu4P4;
-      	raw_muPx = (*muPx)[(*X_mu4Idx)[j]];
-      	raw_muPy = (*muPy)[(*X_mu4Idx)[j]];
-      	raw_muPz = (*muPz)[(*X_mu4Idx)[j]];
+      	raw_muPx = (*muPx)[(*X_mu4Id)[j]];
+      	raw_muPy = (*muPy)[(*X_mu4Id)[j]];
+      	raw_muPz = (*muPz)[(*X_mu4Id)[j]];
       	raw_mu4P4.SetXYZM(raw_muPx, raw_muPy, raw_muPz, MUON_MASS);
 	
-      	int myNumPatSoftMuon = (*muIsPatSoftMuon)[(*X_mu1Idx)[j]] + (*muIsPatSoftMuon)[(*X_mu2Idx)[j]] + (*muIsPatSoftMuon)[(*X_mu3Idx)[j]] + (*muIsPatSoftMuon)[(*X_mu4Idx)[j]];
-      	int myNumPatLooseMuon = (*muIsPatLooseMuon)[(*X_mu1Idx)[j]] + (*muIsPatLooseMuon)[(*X_mu2Idx)[j]] + (*muIsPatLooseMuon)[(*X_mu3Idx)[j]] + (*muIsPatLooseMuon)[(*X_mu4Idx)[j]];
-      	int myNumPatMediumMuon = (*muIsPatMediumMuon)[(*X_mu1Idx)[j]] + (*muIsPatMediumMuon)[(*X_mu2Idx)[j]] + (*muIsPatMediumMuon)[(*X_mu3Idx)[j]] + (*muIsPatMediumMuon)[(*X_mu4Idx)[j]];
-      	int myNumPatTightMuon = (*muIsPatTightMuon)[(*X_mu1Idx)[j]] + (*muIsPatTightMuon)[(*X_mu2Idx)[j]] + (*muIsPatTightMuon)[(*X_mu3Idx)[j]] + (*muIsPatTightMuon)[(*X_mu4Idx)[j]];
+      	int myNumPatSoftMuon = (*muIsPatSoftMuon)[(*X_mu1Id)[j]] + (*muIsPatSoftMuon)[(*X_mu2Id)[j]] + (*muIsPatSoftMuon)[(*X_mu3Id)[j]] + (*muIsPatSoftMuon)[(*X_mu4Id)[j]];
+      	int myNumPatLooseMuon = (*muIsPatLooseMuon)[(*X_mu1Id)[j]] + (*muIsPatLooseMuon)[(*X_mu2Id)[j]] + (*muIsPatLooseMuon)[(*X_mu3Id)[j]] + (*muIsPatLooseMuon)[(*X_mu4Id)[j]];
+      	int myNumPatMediumMuon = (*muIsPatMediumMuon)[(*X_mu1Id)[j]] + (*muIsPatMediumMuon)[(*X_mu2Id)[j]] + (*muIsPatMediumMuon)[(*X_mu3Id)[j]] + (*muIsPatMediumMuon)[(*X_mu4Id)[j]];
+      	int myNumPatTightMuon = (*muIsPatTightMuon)[(*X_mu1Id)[j]] + (*muIsPatTightMuon)[(*X_mu2Id)[j]] + (*muIsPatTightMuon)[(*X_mu3Id)[j]] + (*muIsPatTightMuon)[(*X_mu4Id)[j]];
       if (raw_mu1P4.Pt() > 2.0 && raw_mu2P4.Pt() > 2.0 && raw_mu3P4.Pt() > 2.0 && raw_mu4P4.Pt() > 2.0
 	&& ((*X_Jpsi1_VtxProb)[j] >= 0.005 || (*X_Jpsi2_VtxProb)[j] >= 0.005)
 	&& fabs(raw_mu1P4.Eta()) < 2.4 && fabs(raw_mu2P4.Eta()) < 2.4 && fabs(raw_mu3P4.Eta()) < 2.4 && fabs(raw_mu4P4.Eta()) < 2.4
 	&& (*X_JPiPi_VtxProb)[j] > 0.1 
 	&& Pi1p4.Pt() > 0.5 && Pi2p4.Pt() > 0.5
-	&& Jpsi1p4.M() < 3.25 && Jpsi1p4.M() > 2.95 && fabs(Jpsi1p4.M() - 3.0969) <= 3 * MASSERRSCALE * (*X_Jpsi1massErr)[j]
+	&& Jpsi1_p4.M() < 3.25 && Jpsi1_p4.M() > 2.95 && fabs(Jpsi1_p4.M() - 3.0969) <= 3 * MASSERRSCALE * (*X_Jpsi1_massErr)[j]
 	&& Psi2Sp4.DeltaR(Pi1p4) < 0.5 && Psi2Sp4.DeltaR(Pi2p4) < 0.5 && Psi2Sp4.Pt() > 5   
 	&& myNumPatLooseMuon == 4 && (*X_VtxProb)[j] >= 0.001 
       )
 	{
-		double Jpsi_mass = (Jpsi1p4 + Pi1p4 + Pi2p4).M() - Jpsi1p4.M() + 3.0969;
+		double Jpsi_mass = (Jpsi1_p4 + Pi1p4 + Pi2p4).M() - Jpsi1_p4.M() + 3.0969;
 		h_Psi2S_mass->Fill(Jpsi_mass);
 // Fill and Process histgrams here
 		// PROCESS_DISTRIBUTION
 		if (1) // Signal Cut
 		{
 			// FILL_SIG
-		}else (1) // Background Cut
+		}else if(1) // Background Cut
 		{
 			// FILL_BKG
 		}
 		// PROCESS_CUTOPT
-		if (1& /* cuts */)
-		{
+//		if (1& /* cuts */)
+//		{
 		//	myos << "variables" << endl;
-		}
+//		}
 	}
       } 
    }

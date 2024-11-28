@@ -5,9 +5,9 @@
 ############################### Configuration #################################
 myntuple_H='myntuple.h' # myntuple.h templete file 
 myntuple_C='myntuple.C' # myntuple.C templete file
-Mode='1' # Job Mode 0:generate a Hist info templete file 1:auto hist range 2:fixed hist range 3:cut optimization
+Mode='2' # Job Mode 0:generate a Hist info templete file 1:auto hist range 2:fixed hist range 3:cut optimization
 hist_OUT='HistInfo.out' # Hist info file
-JobScriptDir='/home/storage0/users/junkaiqin/Ntuple-Processor/JobScriptDir' # Directory to store Job Script, where runjobs.C files exists
+JobScriptDir='/home/storage0/users/junkaiqin/Ntuple-Processor/JobScriptDir/TestNewAll_Script' # Directory to store Job Script, where runjobs.C files exists
 # Such a Dir should be created by MakeJobScript.sh. DO NOT INCLUDE last / in JobScriptDir 
 ###############################################################################
 
